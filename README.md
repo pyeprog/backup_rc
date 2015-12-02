@@ -1,6 +1,1 @@
-#Do not read this file
-#Do not read this file
-#Do not read this file
-#Do not read this file
-#Do not read this file
-#Do not read this file
+This project is only for my rc backup.
