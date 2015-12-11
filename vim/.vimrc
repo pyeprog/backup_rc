@@ -23,6 +23,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'user/L9', {'name': 'newL9'}
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()            
 filetype plugin indent on  
@@ -43,7 +46,31 @@ set smartindent
 set cindent
 set autoindent
 set nobackup
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+set smarttab
+set expandtab
+set nowrap
 
 colorscheme desert
 
+nmap <space> :noh<CR>
+imap </ </<C-x><C-o><Esc>==A
+imap <// </<C-x><C-o>==
+
+" NERDTree
 map <C-n> :NERDTreeToggle<CR>
+
+" CtrlP
+let g:ctrlp_map='<c-p>'
+let g:ctrlp_cmd='CtrlP'
+
+" EasyMotion
+let g:EasyMotion_do_mapping=0
+let g:EasyMotion_smartcase=1
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase=1
+" JK motions: Line motions
+let g:EasyMotion_startofline=1
+nmap <Leader>s <Plug>(easymotion-s2)
