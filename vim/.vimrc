@@ -29,6 +29,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-commentary'
 
 call vundle#end()            
 filetype plugin indent on  
