@@ -28,8 +28,11 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
-Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-commentary'
+Plugin 'isRuslan/vim-es6'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 call vundle#end()            
 filetype plugin indent on  
@@ -78,3 +81,9 @@ let g:EasyMotion_smartcase=1
 " JK motions: Line motions
 let g:EasyMotion_startofline=1
 nmap <Leader>s <Plug>(easymotion-s2)
+
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
