@@ -30,7 +30,10 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
 Plugin 'isRuslan/vim-es6'
-Plugin 'SirVer/ultisnips'
+Plugin 'christoomey/vim-system-copy'
+Plugin 'digitaltoad/vim-pug'
+Plugin 'mxw/vim-jsx'
+Plugin 'vim-scripts/loremipsum'
 
 call vundle#end()            
 filetype plugin indent on  
@@ -61,8 +64,13 @@ set nowrap
 colorscheme desert
 
 nmap <space> :noh<CR>
-imap </ </<C-x><C-o><Esc>==A
-imap <// </<C-x><C-o>==
+
+" Quick Html tag
+imap << </
+
+" Add new line above or below
+nnoremap <silent><C-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><C-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -84,6 +92,6 @@ nmap <Leader>s <Plug>(easymotion-s2)
 let g:UltiSnipsSnippetDirectories=['UltiSnips']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
