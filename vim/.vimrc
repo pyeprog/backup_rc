@@ -7,12 +7,16 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'pyeprog/oneTerminal'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
+Plugin 'unblevable/quick-scope'
+Plugin 'ambv/black'
+Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()            
 filetype plugin indent on  
@@ -32,7 +36,7 @@ set nowrap
 
 colorscheme desert
 
-nmap <space> :noh<CR>
+let mapleader=" "
 
 " Quick Html tag
 imap << </
@@ -55,5 +59,14 @@ let g:EasyMotion_smartcase=1
 let g:EasyMotion_smartcase=1
 " JK motions: Line motions
 let g:EasyMotion_startofline=1
-nmap <Leader><Leader> <Plug>(easymotion-s2)
+nmap <Leader><Leader>s <Plug>(easymotion-s)
 
+" Black
+nmap <Leader>== :Black<CR>
+
+" Jedi
+let g:jedi#goto_command = "<C-]>"
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<Leader>su"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<Leader>rn"
