@@ -33,6 +33,7 @@ set softtabstop=4
 set smarttab
 set expandtab
 set nowrap
+set hidden
 
 colorscheme desert
 
@@ -72,3 +73,9 @@ let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<Leader>rn"
 let g:jedi#auto_vim_configuration = 0
 set completeopt=menuone,longest
+
+" Custom
+nnoremap <left> :bp<cr>
+nnoremap <right> :bn<cr>
+nnoremap <up> :tabp<cr>
+nnoremap <down> :tabn<cr>
