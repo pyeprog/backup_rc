@@ -70,3 +70,5 @@ let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<Leader>su"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<Leader>rn"
+let g:jedi#auto_vim_configuration = 0
+set completeopt=menuone,longest
