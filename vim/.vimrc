@@ -15,10 +15,14 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
 Plugin 'unblevable/quick-scope'
-Plugin 'ambv/black'
 Plugin 'davidhalter/jedi-vim'
 
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
+Plugin 'google/vim-glaive'"
 call vundle#end()            
+call glaive#Install()
+
 filetype plugin indent on  
 
 syntax on
@@ -63,7 +67,7 @@ let g:EasyMotion_startofline=1
 nmap <Leader><Leader>s <Plug>(easymotion-s)
 
 " Black
-nmap <Leader>== :Black<CR>
+nmap <Leader>== :FormatCode<CR>
 
 " Jedi
 let g:jedi#goto_command = "<C-]>"
