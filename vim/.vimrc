@@ -17,6 +17,7 @@ Plugin 'unblevable/quick-scope'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'mileszs/ack.vim'
 
 call vundle#end()            
 filetype plugin indent on  
@@ -34,7 +35,7 @@ set smarttab
 set expandtab
 set nowrap
 set hidden
-set textwidth=79
+set textwidth=120
 
 colorscheme desert
 
@@ -52,7 +53,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 " CtrlP
 let g:ctrlp_map='<c-p>'
-let g:ctrlp_cmd='CtrlP'
+let g:ctrlp_cmd='CtrlPMixed'
 
 " EasyMotion
 let g:EasyMotion_do_mapping=0
@@ -90,3 +91,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
+
+" Ack
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
+cnoreabbrev Ack Ack!
+nnoremap <Leader>f :Ack!<Space>
