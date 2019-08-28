@@ -18,6 +18,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'mileszs/ack.vim'
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()            
 filetype plugin indent on  
