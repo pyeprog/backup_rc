@@ -19,6 +19,8 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'mileszs/ack.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'dense-analysis/ale'
+Plugin 'ap/vim-buftabline'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 call vundle#end()
 filetype plugin indent on
@@ -50,11 +52,12 @@ nnoremap <silent><C-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <silent><C-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 " NERDTree
-map <C-n> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeTabsToggle<CR>
+map <leader><leader>n :NERDTreeFind<CR>
 let g:NERDTreeChDirMode=2
 
 " CtrlP
-let g:ctrlp_map='<c-p>'
+let g:ctrlp_map='<leader>p'
 let g:ctrlp_cmd='CtrlPMixed'
 
 " EasyMotion
