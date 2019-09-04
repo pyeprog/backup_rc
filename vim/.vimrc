@@ -21,6 +21,7 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'dense-analysis/ale'
 Plugin 'ap/vim-buftabline'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
@@ -62,15 +63,21 @@ let g:ctrlp_cmd='CtrlPMixed'
 
 " EasyMotion
 let g:EasyMotion_do_mapping=0
-let g:EasyMotion_smartcase=1
 " Turn on case insensitive feature
 let g:EasyMotion_smartcase=1
 " JK motions: Line motions
 let g:EasyMotion_startofline=1
-nmap <Leader><Leader>s <Plug>(easymotion-s)
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+nmap <Leader><Leader>s <Plug>(easymotion-overwin-f2)
 
 " Autoformat
 nmap <Leader>== :Autoformat<CR>
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
 
 " Jedi
 let g:jedi#goto_command = "<C-]>"
@@ -103,3 +110,6 @@ let g:ale_fixers = {
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+" git fugitive
+nnoremap <Leader>bl :Gblame<cr>
