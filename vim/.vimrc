@@ -19,9 +19,11 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'mileszs/ack.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'dense-analysis/ale'
-Plugin 'ap/vim-buftabline'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/vim-auto-save'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'idanarye/vim-vebugger'
 
 call vundle#end()
 filetype plugin indent on
@@ -89,10 +91,10 @@ let g:jedi#auto_vim_configuration = 0
 set completeopt=menuone,longest
 
 " Custom
-nnoremap <left> :bp<cr>
-nnoremap <right> :bn<cr>
-nnoremap <up> :tabp<cr>
-nnoremap <down> :tabn<cr>
+nnoremap <up> :bp<cr>
+nnoremap <down> :bn<cr>
+nnoremap <left> :tabp<cr>
+nnoremap <right> :tabn<cr>
 
 " Ack
 if executable('ag')
@@ -113,3 +115,18 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 " git fugitive
 nnoremap <Leader>bl :Gblame<cr>
+
+" auto save
+let g:auto_save = 1
+let g:auto_save_silent = 1
+
+" vebugger
+nnoremap <Leader><Leader>d :VBGstartPDB 
+nnoremap <Leader><Leader>b :VBGtoggleBreakpointThisLine<cr>
+nnoremap <Leader><Leader>e :VBGeval 
+nnoremap <Leader>se :VBGevalWordUnderCursor<cr>
+nnoremap <F9> :VBGcontinue<cr>
+nnoremap <F8> :VBGstepOver<cr>
+nnoremap <F7> :VBGstepIn<cr>
+nnoremap <F6> :VBGstepOut<cr>
+nnoremap <F1> :VBGkill<cr>
